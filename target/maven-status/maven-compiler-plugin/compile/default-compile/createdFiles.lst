@@ -1,0 +1,11 @@
+com\baeldung\spring\data\es\config\ElasticSearchConfig.class
+com\baeldung\spring\data\es\service\ArticleServiceImpl.class
+com\baeldung\spring\data\es\controller\ArticleController.class
+com\baeldung\spring\data\es\dao\ArticleDaoImp.class
+com\baeldung\spring\data\es\model\Article.class
+com\baeldung\spring\data\es\config\WebMvcConfigurerAdapte.class
+com\baeldung\elasticsearch\Person.class
+com\baeldung\spring\data\es\dao\ArticleDao.class
+com\baeldung\spring\data\es\model\Author.class
+com\baeldung\spring\data\es\repository\ArticleRepository.class
+com\baeldung\spring\data\es\service\ArticleService.class

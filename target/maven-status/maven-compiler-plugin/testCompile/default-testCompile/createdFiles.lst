@@ -1,0 +1,4 @@
+com\baeldung\spring\data\es\ElasticSearchManualTest.class
+com\baeldung\spring\data\es\ElasticSearchQueryManualTest.class
+org\baeldung\SpringContextManualTest.class
+com\baeldung\elasticsearch\ElasticSearchManualTest.class
