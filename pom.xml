@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.raju</groupId>
-    <artifactId>ElasticIntregrationRepositoryRaju</artifactId>
+    <artifactId>ElasticIntregrationRepository</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
        
@@ -78,7 +78,11 @@
             <version>${spring.version}</version>
         </dependency>
                 
-                
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring.version}</version>
+        </dependency>   
                 
         <dependency>
             <groupId>org.springframework.data</groupId>
@@ -91,19 +95,28 @@
             <artifactId>elasticsearch</artifactId>
             <version>${elasticsearch.version}</version>
         </dependency>
+        
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>transport</artifactId>
+            <version>${elasticsearch.version}</version>
+            <!--<version>5.1.1</version>-->
+        </dependency>
+        
+        
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>${fastjson.version}</version>
         </dependency>
         
-        <dependency>
+        <!--        <dependency>
             <groupId>org.locationtech.spatial4j</groupId>
             <artifactId>spatial4j</artifactId>
             <version>${spatial4j.version}</version>                        
-        </dependency>
+        </dependency>-->
 
-        <dependency>
+        <!--        <dependency>
             <groupId>com.vividsolutions</groupId>
             <artifactId>jts</artifactId>
             <version>${jts.version}</version>
@@ -113,13 +126,13 @@
                     <artifactId>xercesImpl</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
+        </dependency>-->
         
-        <dependency>
+        <!--        <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>${log4j.version}</version>
-        </dependency>
+        </dependency>-->
         
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
@@ -131,13 +144,16 @@
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>-->
-        <dependency>
-            <groupId>org.elasticsearch.client</groupId>
-            <artifactId>transport</artifactId>
-            <version>${elasticsearch.version}</version>
-            <!--<version>5.1.1</version>-->
-        </dependency>
         
+        <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.25</version>
+            <scope>test</scope>
+        </dependency>
+
+
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
@@ -154,7 +170,7 @@
             
         </dependency>
 
-        <dependency>
+        <!--        <dependency>
             <groupId>org.apache.openwebbeans.test</groupId>
             <artifactId>cditest-owb</artifactId>
             <version>1.2.8</version>
@@ -169,29 +185,29 @@
                     <artifactId>geronimo-atinject_1.0_spec</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
+        </dependency>-->
 
-        <dependency>
+        <!--        <dependency>
             <groupId>org.skyscreamer</groupId>
             <artifactId>jsonassert</artifactId>
             <version>1.5.0</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
 
         <!-- Upgrade xbean to 4.5 to prevent incompatibilities due to ASM versions -->
-        <dependency>
+        <!--        <dependency>
             <groupId>org.apache.xbean</groupId>
             <artifactId>xbean-asm5-shaded</artifactId>
             <version>4.5</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
 
-        <dependency>
+        <!--        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
             <version>3.0-alpha-1</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
 
         
         
@@ -199,49 +215,49 @@
 
  
         <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
-        <dependency>
+        <!--        <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>3.8.0</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
 
         
  
         
         <!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
-        <dependency>
+        <!--        <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-all</artifactId>
             <version>2.0.2-beta</version>
-            <!--<version>1.8.4</version>-->
+            <version>1.8.4</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
 
 
         <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
-        <dependency>
+        <!--        <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
             <version>2.28.2</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
         <!-- https://mvnrepository.com/artifact/org.mockito/mockito-junit-jupiter -->
-        <dependency>
+        <!--        <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-junit-jupiter</artifactId>
             <version>2.28.2</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
         
         
                
-        <dependency>
+        <!--        <dependency>
             <groupId>io.projectreactor</groupId>
             <artifactId>reactor-test</artifactId>
             <version>3.2.10.RELEASE</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
         
         
         <!-- APACHE -->
@@ -252,32 +268,32 @@
             <!--<scope>test</scope>-->
         </dependency>
         
-        <dependency>
+        <!--        <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>log4j-over-slf4j</artifactId>
             <version>1.7.26</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
 
       
-        <dependency>
+        <!--        <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-to-slf4j</artifactId>
             <version>2.12.0</version>
-        </dependency>
-        <dependency>
+        </dependency>-->
+        <!--        <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.1.7</version>
-        </dependency>
+        </dependency>-->
 
 
-        <dependency>
+        <!--        <dependency>
             <groupId>net.java.dev.jna</groupId>
             <artifactId>jna</artifactId>
             <version>${jna.version}</version>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
    
  
         <dependency>
@@ -344,5 +360,5 @@
 
    
  
-    <name>ElasticIntregrationRepositoryRaju</name>
+    <name>ElasticIntregrationRepository</name>
 </project>

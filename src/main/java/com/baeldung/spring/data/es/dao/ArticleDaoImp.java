@@ -13,13 +13,14 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
 import org.springframework.data.elasticsearch.core.query.SearchQuery;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Raju
  */
-@Repository
+@Component
 public class ArticleDaoImp implements ArticleDao {
 //    private final Logger LOG = LoggerFactory.getLogger(getClass());
 

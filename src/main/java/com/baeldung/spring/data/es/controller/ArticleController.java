@@ -21,16 +21,16 @@ import org.springframework.web.bind.annotation.RestController;
  *
  * @author Raju
  */
-//@Controller
-@RestController
+@Controller
+//@RestController
 public class ArticleController {
 
     @Autowired
     private ArticleDao articleDAO;
 
-//    @RequestMapping(value = "", method = RequestMethod.GET)
+    @RequestMapping(value = "all", method = RequestMethod.GET)
 //    @ResponseBody
-    @GetMapping(value = "/")
+//    @GetMapping(value = "/")
     public List<Article> getAllArticles() {
         System.out.println("getAllArticles");
         return articleDAO.getAllArticles();

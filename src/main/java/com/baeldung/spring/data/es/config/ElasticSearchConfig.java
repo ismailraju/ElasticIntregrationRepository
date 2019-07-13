@@ -19,7 +19,8 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 
 @Configuration
 @EnableElasticsearchRepositories(basePackages = "com.baeldung.spring.data.es.repository")
-@ComponentScan(basePackages = {"com.baeldung.spring.data.es.service"})
+//@ComponentScan(basePackages = {"com.baeldung.spring.data.es.service"})
+@ComponentScan(basePackages = {"com"})
 public class ElasticSearchConfig {
 
 //    @Value("${elasticsearch.home:/usr/local/Cellar/elasticsearch/5.6.0}")
